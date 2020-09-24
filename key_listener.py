@@ -10,7 +10,8 @@ class KeyListener():
     def start(self, available_keys):
         while True:
             key = keyboard.read_key()
-            if key == 'esc':
-                sys.exit()
-            elif key in (available_keys):
-                return key
+            if not keyboard.is_pressed(key):        # Check if user released the key
+                if key == 'esc':
+                    sys.exit()
+                elif key in (available_keys):
+                    return key

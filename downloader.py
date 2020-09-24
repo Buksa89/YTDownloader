@@ -1,8 +1,9 @@
-from menu import Menu
-from key_listener import KeyListener
+from front import Front
+from back import Back
 
-def run_downlader():
-    # Crate menu-object for display and process interactive menu
-    menu = Menu()
+# Crate Frontend and Backend objects
+front = Front()
+back = Back(front)
 
-run_downlader()
+# Start program
+back.create_screen()
