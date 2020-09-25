@@ -13,5 +13,5 @@ class KeyListener():
             if not keyboard.is_pressed(key):        # Check if user released the key
                 if key == 'esc':
                     sys.exit()
-                elif key in (available_keys):
+                elif key in available_keys:
                     return key

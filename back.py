@@ -31,7 +31,13 @@ class Back():
     def create_screen(self):
         """Create screen to display"""
 
-        self.front.display_screen(self.screen)                                  # Display screen from frontend
+        variables = self.prepare_screen()                                   # prepare variables do display for user
+
+        print("\n"*100)
+
+        # Display screen from frontend
+        screen, user_response = self.front.display_screen(self.screen,variables)
+        print(screen)
 
         # If user can press any button, program will be ready to switch screen
         try:
@@ -41,4 +47,10 @@ class Back():
             self.create_screen()                                                # Switch screen
         except: None
 
+    def prepare_screen(self):
+        """This method prepare necessary variables for screens"""
+        variables={}
 
+        # TODO Place for variables, if screen need them
+
+        return variables
