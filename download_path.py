@@ -8,17 +8,19 @@ class DownloadPath():
         if not os.path.isfile('path'):
             with open('path', 'w'): None
 
-    def read_path(self):
+    def read(self):
         """Open path-file and read path from there"""
         with open('path') as file_object:
             return file_object.read()
 
-    def path_valid(self, path):
+    def is_valid(self, path):
         """Is path correct?"""
         return os.path.isdir(path)
 
-    def write_path(self):
+    def write(self, path):
         """Write new path to file"""
+        with open('path','w') as file_object:
+            file_object.write(path)
 
     def set_path(self):
         """set path to read and write files"""
