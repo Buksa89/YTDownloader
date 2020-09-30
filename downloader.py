@@ -9,6 +9,7 @@ if path.read() == '':
 else:
     screen_name = 'main_menu'
 
+# Main loop
 while True:
-    screen = Screen(screen_name, path)
-    screen_name = screen.next
+    screen = Screen(screen_name, path)      # Start screen by name
+    screen_name = screen.next               # Change name for next screen

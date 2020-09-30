@@ -22,6 +22,3 @@ class DownloadPath():
         with open('path','w') as file_object:
             file_object.write(path)
 
-    def set_path(self):
-        """set path to read and write files"""
-
